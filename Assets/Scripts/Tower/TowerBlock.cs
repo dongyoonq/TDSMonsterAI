@@ -21,8 +21,8 @@ public class TowerBlock : MonoBehaviour
 
     private void Start()
     {
-        var hpObj = Resources.Load<HpBar>("hpBar");
-        hpBar = Instantiate(hpObj);
+        hpBar = ResourceManager.Inst.Instantiate<HpBar>("hpBar", true);
+        //hpBar = Instantiate(hpObj);
         hpBar.Init(gameObject, 1.5f, Vector3.left);
     }
 

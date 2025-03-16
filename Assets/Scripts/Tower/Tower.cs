@@ -54,7 +54,7 @@ public class Tower : MonoBehaviour
 
         for (int i = 1; i < n; i++)
         {
-            GameObject blockObj = Instantiate(blockPrefab, transform);
+            GameObject blockObj = ResourceManager.Inst.Instantiate(blockPrefab, transform, true);
             blockObj.transform.localPosition = new Vector3(0, i, 0);
             TowerBlock block = blockObj.GetComponent<TowerBlock>();
             block.Init(this, i);

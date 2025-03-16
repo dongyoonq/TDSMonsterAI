@@ -27,7 +27,7 @@ public class FloatingText : MonoBehaviour
 
     IEnumerator FloatText(string text, Transform mainTf)
     {
-        var tp = Instantiate(tmProOrg);
+        var tp = ResourceManager.Inst.Instantiate(tmProOrg);
         tp.transform.SetParent(CameraManager.Inst.Canvas.transform);
         Vector3 targetPos = Camera.main.WorldToScreenPoint(
             new Vector3(mainTf.position.x, mainTf.position.y + 1f, 0));

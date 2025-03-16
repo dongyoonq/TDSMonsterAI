@@ -24,8 +24,8 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        var hpObj = Resources.Load<HpBar>("hpBar");
-        hpBar = Instantiate(hpObj);
+        hpBar = ResourceManager.Inst.Instantiate<HpBar>("hpBar", true);
+        //hpBar = Instantiate(hpObj);
         hpBar.Init(gameObject, 1.3f, Vector3.up);
     }
 

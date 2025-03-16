@@ -40,7 +40,7 @@ public class Weapon : MonoBehaviour
     {
         if (zombie != null)
         {
-            var prj = Instantiate(proj);
+            var prj = ResourceManager.Inst.Instantiate(proj, true);
             prj.SetData(Projectile.ProjectileType.Missile, mainTf, zombie.transform, atkRate);
         }
     }
